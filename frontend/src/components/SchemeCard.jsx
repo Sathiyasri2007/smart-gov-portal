@@ -27,7 +27,7 @@ const SchemeCard = ({ scheme }) => {
         <h3 className="text-xl font-bold text-white">{scheme.name}</h3>
         <div className="flex gap-2">
           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-            scheme.status === 'active' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200' : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
+            scheme.status === 'active' ? 'bg-emerald-600 text-white' : 'bg-gray-500 text-white'
           }`}>
             {scheme.status}
           </span>
