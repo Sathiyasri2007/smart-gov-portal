@@ -24,7 +24,7 @@ const SchemeCard = ({ scheme }) => {
   return (
     <div className="card hover:shadow-xl transition-all hover:scale-105 border-l-4 border-purple-500">
       <div className="flex items-start justify-between mb-4">
-        <h3 className="text-xl font-bold text-purple-700 dark:text-purple-300">{scheme.name}</h3>
+        <h3 className="text-xl font-bold text-white">{scheme.name}</h3>
         <div className="flex gap-2">
           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
             scheme.status === 'active' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200' : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
@@ -47,9 +47,9 @@ const SchemeCard = ({ scheme }) => {
         </div>
       </div>
       
-      <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{scheme.description}</p>
+      <p className="text-white mb-4 line-clamp-3">{scheme.description}</p>
       
-      <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <div className="flex items-center gap-4 text-sm text-white mb-4">
         <div className="flex items-center">
           <FiCalendar className="mr-1" />
           <span>Deadline: {new Date(scheme.deadline).toLocaleDateString()}</span>
@@ -60,7 +60,7 @@ const SchemeCard = ({ scheme }) => {
         </div>
       </div>
       
-      <Link to={`/schemes/${scheme._id}`} className="flex items-center text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 font-medium transition-colors">
+      <Link to={`/schemes/${scheme._id}`} className="flex items-center text-white hover:text-gray-200 font-medium transition-colors">
         View Details <FiArrowRight className="ml-2" />
       </Link>
     </div>
